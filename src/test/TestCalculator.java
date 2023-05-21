@@ -21,29 +21,29 @@ class TestCalculator {
 		
 	@DisplayName("Testing the addition method: 2 + 2 should be 4")
 	@Test
-	void twoPlusTwoIsFour() {
+	void twoPlusTwoShouldBeFour() {
 		assertEquals(4, calc.addition(2, 2));
 	}
 		
 	@DisplayName("Testing the addition method: 19 + 20 != 40")
 	@Test
-	void testCalculatorAdditionWithError(){
+	void shouldAssertNotEqualsAddition(){
 		assertNotEquals(40, calc.addition(19, 20));
 		// If assertEquals(40, calc.addition(19, 20));
 		// Expected <40.0> but was: <39.0>
 	}
 		
-	@DisplayName("Testing the subtraction method: 15 - 5 != 1")
+	@DisplayName("Testing the subtraction method: 15 - 5 Shouldn't be 1")
 	@Test
-	void zeroPlusZeroShouldntBeNull() {
+	void shouldAssertNotEqualsSubtraction() {
 		assertNotEquals(1, calc.subtraction(15, 5));
-		//Subtraction function return 1
+		//The method "subtraction" returns 1
 		//Expected: Not equal but was <1.0>
 	}
 	
 	@DisplayName("Testing the multiplication method: ")
 	@Test
-	void shouldThrowAnError() {
+	void shouldAssertEquals() {
 		assertEquals(20*2, calc.multiplication(20, 2));
 	}
 		
@@ -51,8 +51,7 @@ class TestCalculator {
 	@Test
 	void testCalculatorDivision() {
 		assertEquals(10, calc.division(20, 2));
-		// Test a broken function... This function returns 0.0
-		// Function returns 0.0
+		// The method "division" returns 0.0
 		// Expected <10.0> but was: <0.0>
 	}
 		
